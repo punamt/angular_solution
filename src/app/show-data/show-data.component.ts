@@ -17,7 +17,7 @@ export class ShowDataComponent implements OnInit {
   currentShow:IShowmap;
  //currentShow:Observable<IShowmap>;
  
- errorMessage: string='Information is not present!!! ';
+ //errorMessage: string='Information is not present!!! ';
    
   constructor(private route:ActivatedRoute,private router:Router, private showService:ShowService) {
     
@@ -27,23 +27,22 @@ export class ShowDataComponent implements OnInit {
 
   ngOnInit() {
    
-    const  param = this.route.snapshot.paramMap.get('id');
+    let  param = this.route.snapshot.paramMap.get('name');
     
-   console.log(param);
+   console.log("param" + param);
     if(param){
-      const id= +param;
-      this.getShowData(id);
+      let name= param
+      this.getShowData(name);
      }
    
   }
 
   
 
-  getShowData(id:number):void{
-    this.showService.getShow(id).subscribe(
-      currentShow  => {this.currentShow = currentShow,   //currentShow  is the response object from server this is assigning
-        error => this.errorMessage = <any>error 
-                                          }                                
+  getShowData(name:string):void{
+    this.showService.getShow(name).subscribe(
+      currentShow  => {this.currentShow = currentShow,  //currentShow  is the response object from server this is assigning
+                   console.log(this.currentShow)  }             
         );
     }
     

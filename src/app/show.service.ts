@@ -52,9 +52,9 @@ getShowMapData(name1:string): Observable<IShowmap[]>{
   
   }
 
-  getShow(id:number){
+  getShow(name:string):Observable<IShowmap>{
    return this.http.get<IShowmap>(
-    `${environment.baseUrl}api.tvmaze.com/singlesearch/shows?q=${id}`)
+    `${environment.baseUrl}api.tvmaze.com/singlesearch/shows?q=${name}`)
    
 
    /* return this.getShowMapData(showName).pipe(

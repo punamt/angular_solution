@@ -29,7 +29,7 @@ import { WelcomeComponent } from './home/welcome.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       {path:'current-show',component:CurrentShowComponent},
-      {path:'show-data/:id',component:ShowDataComponent},
+      {path:'show-data/:name',component:ShowDataComponent},
       
       
     ])

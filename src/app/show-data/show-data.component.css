@@ -18,7 +18,7 @@ font-display:red;
 
 }
 #summary{
-    
+    margin-top:30px;
     text-align: justify;
     font-style: oblique;
     overflow:hidden;
@@ -29,7 +29,7 @@ font-display:red;
 
 .card{
     margin-top:50px;
-    height:300px;
+    height:400px;
     width:100%;
     box-shadow:0 0 50px grey;
     border: 2 px solid grey;
