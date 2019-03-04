@@ -11,6 +11,8 @@ import { ShowDetailComponent } from './show-detail/show-detail.component';
 import { ShowDataComponent } from './show-data/show-data.component';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './home/welcome.component';
+import { StarComponent } from './shared/star.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { WelcomeComponent } from './home/welcome.component';
     CurrentShowComponent,
     ShowDetailComponent,
     ShowDataComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { WelcomeComponent } from './home/welcome.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFontAwesomeModule,
     RouterModule.forRoot([
       {path:'current-show',component:CurrentShowComponent},
       {path:'show-data/:name',component:ShowDataComponent},

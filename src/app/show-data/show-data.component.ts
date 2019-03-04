@@ -50,7 +50,9 @@ export class ShowDataComponent implements OnInit {
       this.router.navigate(['/current-show']);
     }
 
-    
+    onKeyup():void {
+      this.router.navigate(['/current-show']);
+    }
 
 }
  

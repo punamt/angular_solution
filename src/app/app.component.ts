@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ShowService } from './show.service';
 import {IShowmap} from './ishowmap'
+import { ActivatedRoute,Router,ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
   title = 'tv-show-app';
   currentShow:IShowmap[]=[]
 
-  constructor(private showService:ShowService){}
+  constructor(private showService:ShowService,private route:ActivatedRoute,private router:Router){}
 
   doSearch(data){
      this.showService.getShowMapData(data).subscribe(
@@ -21,6 +22,7 @@ export class AppComponent {
      )
    }
 
+   
    /*onActivate(event) {
     window.scroll(0,0);
     

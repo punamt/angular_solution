@@ -1,11 +1,16 @@
 
    <div class="container" *ngIf='currentShow'>       
       <div class="card">
+        
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-4 jumotron"  id="image2">
                     <img [src]="currentShow.image?.medium" alt="image" class="img-responsive">
+                    <div class="card-title">
+                        <h4>{{currentShow.name}}</h4>
+                      </div>
                   </div>
+                  
                 <div class="col-lg-8" id="detail"> <!--------show details-->
                   <div class="row">
                      <div class="col-lg-4">
@@ -52,6 +57,14 @@
                           {{currentShow.genres}}
                         </div>   
                    </div>
+                   <div class="row">
+                      <div class="col-lg-4">
+                          <b>Rating:</b>
+                       </div> 
+                       <div class="col-lg-8" *ngIf='currentShow.rating.average'>
+                          <app-star [rating]='currentShow.rating.average'></app-star>
+                        </div>   
+                   </div>
                </div>
             </div>
               
@@ -73,8 +86,7 @@
         
   </div> <!---------end of if-------->
 
-
-
+  
   
 
        <!------- <section class="row">
