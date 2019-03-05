@@ -39,11 +39,3 @@ export class ShowDetailComponent implements OnInit {
  
 }
 
-/*modelChange(value:string){
-  this.search=value;
-  this.showService.getShowMapData(this.search).subscribe(
-    data =>  this.current = data
-      
-  )
-
-}*/

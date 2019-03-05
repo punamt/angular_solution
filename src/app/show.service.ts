@@ -7,32 +7,6 @@ import { IShowmap } from './ishowmap';
 import { Observable, throwError } from 'rxjs';
 
 
-
-/*interface IShowMapData  {
-show:{
-  name:string,
-   language:string,
-   type:string
-  }
-
-
-   schedule:{
-     time:string,
-     days:[string]
-   },
-   network:{
-    name: string
-   }
-   rating:{
-     average:number
-   }
-   summary:string
-
-
-}*/
-
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -57,10 +31,7 @@ getShowMapData(name1:string): Observable<IShowmap[]>{
     `${environment.baseUrl}api.tvmaze.com/singlesearch/shows?q=${name}`)
    
 
-   /* return this.getShowMapData(showName).pipe(
-       map((products: IShowmap[]) => products.find(p => p.name===showName)),
-    
-      );*/
+   
 } 
 
 }

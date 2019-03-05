@@ -32,8 +32,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     ReactiveFormsModule,
     AngularFontAwesomeModule,
     RouterModule.forRoot([
-      {path:'current-show',component:CurrentShowComponent},
       {path:'show-data/:name',component:ShowDataComponent},
+      {path:'current-show',component:CurrentShowComponent}
       
       
     ])

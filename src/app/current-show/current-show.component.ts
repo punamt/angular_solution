@@ -24,10 +24,7 @@ export class CurrentShowComponent implements OnInit {
 
 
   ngOnInit()  { 
-  /* this.showService.getShowMapData(this.value).subscribe(
-      data =>  this.current = data
-        
-    )*/
+  
 }
        
 

@@ -23,9 +23,6 @@ export class AppComponent {
    }
 
    
-   /*onActivate(event) {
-    window.scroll(0,0);
-    
-      }*/
+   
   }
 

@@ -15,9 +15,7 @@ export class ShowDataComponent implements OnInit {
 
  pageTitle:"routing page"  
   currentShow:IShowmap;
- //currentShow:Observable<IShowmap>;
  
- //errorMessage: string='Information is not present!!! ';
    
   constructor(private route:ActivatedRoute,private router:Router, private showService:ShowService) {
     
@@ -48,12 +46,10 @@ export class ShowDataComponent implements OnInit {
     
     onBack():void {
       this.router.navigate(['/current-show']);
+      
     }
 
-    onKeyup():void {
-      this.router.navigate(['/current-show']);
-    }
-
+   
 }
  
   
